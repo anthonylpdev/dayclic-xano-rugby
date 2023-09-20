@@ -16,6 +16,7 @@ const config: Config = {
       "content/secondary": "#a1a1a1",
       "border/secondary": "#25252e",
       "border/primary": "#47474c",
+      transparent: "transparent",
     },
     fontSize: {
       base: "1rem",
