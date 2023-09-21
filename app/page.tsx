@@ -135,7 +135,10 @@ export default async function Home(): Promise<JSX.Element> {
 
 async function getData(): Promise<HomeData[]> {
     const res = await fetch(
-        'https://x8ki-letl-twmt.n7.xano.io/api:YSHKzsXO/home'
+        'https://x8ki-letl-twmt.n7.xano.io/api:YSHKzsXO/home',
+        {
+            cache: 'no-store',
+        }
     )
 
     if (!res.ok) {

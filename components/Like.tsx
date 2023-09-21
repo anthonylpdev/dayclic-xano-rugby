@@ -1,9 +1,9 @@
 'use client'
 
+import { HomeData } from '@/utils/models.js'
 import { mdiHeart, mdiHeartOutline } from '@mdi/js'
 import Icon from '@mdi/react'
 import { useState } from 'react'
-import { HomeData } from '@/utils/models.js'
 
 const Like = (info: HomeData): JSX.Element => {
     const [liked, setLiked] = useState(info.liked)
@@ -20,6 +20,7 @@ const Like = (info: HomeData): JSX.Element => {
                     player_id: info.id,
                     liked: !liked,
                 }),
+                cache: 'no-store',
             }
         )
 
