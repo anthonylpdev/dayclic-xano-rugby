@@ -2,16 +2,15 @@ import {
     mdiAccountPlus,
     mdiArrowUpDownBold,
     mdiFlag,
-    mdiHeartOutline,
     mdiMagnify,
     mdiMapMarker,
     mdiWeightKilogram,
 } from '@mdi/js'
 import Icon from '@mdi/react'
 import Image from 'next/image'
-import profilePic from '../public/profile.jpg'
 import logoPic from '../public/logo.svg'
-
+import profilePic from '../public/profile.jpg'
+import Like from './components/Like'
 let data = [
     {
         id: 1,
@@ -123,8 +122,6 @@ export default async function Home() {
                     alt="Picture of the author"
                     width={120}
                     height={120}
-                    // blurDataURL="data:..." automatically provided
-                    // placeholder="blur" // Optional blur-up while loading
                 />
             </div>
             <form className="flex space-x-4 mb-8" action="">
@@ -149,9 +146,7 @@ export default async function Home() {
                             key={info.id}
                         >
                             <div className="flex items-center justify-end">
-                                <button>
-                                    <Icon path={mdiHeartOutline} size={1} />
-                                </button>
+                                <Like />
                             </div>
                             <div className="flex space-x-4">
                                 <Image
@@ -160,8 +155,6 @@ export default async function Home() {
                                     alt="Picture of the author"
                                     width={80}
                                     height={80}
-                                    // blurDataURL="data:..." automatically provided
-                                    // placeholder="blur" // Optional blur-up while loading
                                 />
                                 <div>
                                     <h2 className="text-lg leading-8 text-content/primary">
