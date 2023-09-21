@@ -127,7 +127,7 @@ export default async function Home(): Promise<JSX.Element> {
             {data.length ? (
                 <Card data={data} />
             ) : (
-                <span>Aucun joeurs n'a été créé.</span>
+                <span>Aucun joueurs créé.</span>
             )}
         </main>
     )

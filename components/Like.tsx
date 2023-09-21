@@ -5,7 +5,7 @@ import Icon from '@mdi/react'
 import { useState } from 'react'
 import { HomeData } from '@/utils/models.js'
 
-const Like = ({ info }): JSX.Element => {
+const Like = (info: HomeData): JSX.Element => {
     const [liked, setLiked] = useState(info.liked)
 
     const clickLike = async () => {

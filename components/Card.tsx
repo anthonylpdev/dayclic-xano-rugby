@@ -19,7 +19,7 @@ const Card = ({ data }: HomeProps) => {
                     key={info.id}
                 >
                     <div className="flex items-center justify-end">
-                        <Like info={info} />
+                        <Like {...info} />
                     </div>
                     <div className="flex space-x-4">
                         <Image
