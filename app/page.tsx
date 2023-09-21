@@ -104,13 +104,15 @@ let data = [
     },
 ]
 
-const toto = getData()
-toto.then((response) => {
-    console.log('hit !')
-    data = response
-}).catch((error) => {
-    // notifError('rr')
-})
+const getInfo = getData()
+getInfo
+    .then((response) => {
+        console.log('hit !')
+        data = response
+    })
+    .catch((error) => {
+        console.log('error fetching', error)
+    })
 
 export default async function Home() {
     return (
